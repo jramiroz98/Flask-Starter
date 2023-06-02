@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Change Password
+{% endblock %}
+
+{% block main %}
+<form action="/chpass" method="post">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" name="old_password" placeholder="Old Password" type="password">
+    </div>
+
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" name="new_password" placeholder="New Password" type="password">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" name="confirmation" placeholder="New Password (again)"
+            type="password">
+    </div>
+    <button class="btn btn-primary" type="submit">Change</button>
+</form>
+{% endblock %}
